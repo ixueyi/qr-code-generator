@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container" class="main-container">
+        <h1 class="title">二维码生成器</h1>
+        <p class="p-tips">请在下方输入URL以生成对应的二维码并下载对应的二维码</p>
+        <form id="generator-form">
+            <input type="url" id="url" class="url" placeholder="请输入URL">
+            <select name="size" id="size" class="size">
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300" selected>300x300</option>
+                <option value="400">400x400</option>
+                <option value="500">500x500</option>
+                <option value="600">600x600</option>
+                <option value="700">700x700</option>
+            </select>
+            <div class="btn-container">
+                <button class="btn">生成二维码</button>
+            </div>
+        </form>
+    </div>
+   <div id="bottom-container" class="bottom-container">
+        <div id="spinner" class="spinner">
+            <div class="lds-dual-ring"></div>
+        </div>
+        <div id="qrcode" class="qrcode"></div>
+   </div>
+    
+</body>
+</html>
